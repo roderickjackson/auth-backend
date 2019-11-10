@@ -1,5 +1,6 @@
 # Project dependencies
-.cache
+package-lock.json
+/src/db/keys_dev.js
 node_modules
 
 # Build directory
