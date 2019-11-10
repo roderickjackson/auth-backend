@@ -1,12 +1,11 @@
 import mongodb from 'mongodb'
 import assert from 'assert'
-import connection from './key_dev'
+import urlConnection from './key_dev'
 
 export default async function makeDb(){
   const mongoClient = mongodb.mongoClient
-  const url = connection()
   const dbName = 'auth'
-  const client = new mongoClient(url)
+  const client = new mongoClient(urlConnection())
 
   client.connect((err) => {
     assert.equal(null, err)
@@ -15,5 +14,4 @@ export default async function makeDb(){
     const db = client.db(dbName)
     client.close()
   })
-
 }

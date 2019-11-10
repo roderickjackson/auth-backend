@@ -1,3 +1,3 @@
-export default function connection(){
+export default function urlConnection(){
   return 'mongodb+srv://roderick3427:.eQ13Dq3@cluster0-wuodb.mongodb.net/test?retryWrites=true&w=majority'
 }
