@@ -1,0 +1,14 @@
+{
+  "name": "auth-backend",
+  "version": "1.0.0",
+  "description": "This project will be a generic auth code base",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roderick Jackson-Bradley",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
