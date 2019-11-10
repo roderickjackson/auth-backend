@@ -1,18 +1,49 @@
 {
-  "name": "auth-backend",
+  "name": "express-api",
   "version": "1.0.0",
-  "description": "This project will be a generic auth code base",
-  "main": "index.js",
+  "description": "",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "node index.js",
-    "server": "nodemon index.js"
+    "test": "./node_modules/.bin/jest",
+    "prestart": "npm run -s build",
+    "start": "node dist/index.js",
+    "clean": "rimraf dist",
+    "build": "npm run clean && mkdir -p dist && babel src -s -D -d dist"
   },
-  "author": "Roderick Jackson-Bradley",
+  "author": "Bill Sourour (Dev Mastery)",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongodb": "^3.3.3",
+    "mongoose": "^5.7.9"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4"
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "faker": "^4.1.0",
+    "jest": "^23.6.0",
+    "nodemon": "^1.19.4",
+    "regenerator-runtime": "^0.13.1",
+    "rimraf": "^2.6.3"
+  },
+  "jest": {
+    "verbose": true,
+    "testRegex": ".spec.js"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/env",
+        {
+          "targets": {
+            "node": "10.8.0"
+          }
+        }
+      ]
+    ]
   }
 }
