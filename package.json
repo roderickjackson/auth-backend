@@ -13,10 +13,14 @@
   "author": "Roderick Jackson-Bradley(RJ)",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
     "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.3.3",
-    "mongoose": "^5.7.9"
+    "mongoose": "^5.7.9",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",

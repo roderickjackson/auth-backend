@@ -1,9 +1,10 @@
-const mongodb = require('mongodb')
-const assert = require('assert')
+import mongodb from 'mongodb'
+import assert from 'assert'
+import connection from './key_dev'
 
 export default async function makeDb(){
   const mongoClient = mongodb.mongoClient
-  const url = 'mongodb+srv://roderick3427:.eQ13Dq3@cluster0-wuodb.mongodb.net/test?retryWrites=true&w=majority'
+  const url = connection()
   const dbName = 'auth'
   const client = new mongoClient(url)
 
